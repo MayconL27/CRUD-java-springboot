@@ -6,7 +6,7 @@ import org.springframework.web.bind.annotation.RestController;
 @RestController
 public class GreentingsController {
 
-    @GetMapping(value="/")
+    @GetMapping(value="/maycon")
     public String getMethodName() {
         return "Olá Mundo VSCode!";
     }
