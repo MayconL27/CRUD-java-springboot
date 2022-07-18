@@ -1,5 +1,7 @@
 package com.springbootcrud.app.controller;
 
+import java.util.List;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -42,5 +44,15 @@ public class GreentingsController {
 
 		return "Ola mundo " + nome;
 	}
+
+    @GetMapping(value = "listatodos")
+    @ResponseBody // Retorna um JSON
+    public ResponseEntity<List<Usuario>> listaUsuario() {
+        
+        List<Usuario> usuarios = usuarioRepository.findAll(); // consulta no banco de dados
+
+        return new ResponseEntity<List<Usuario>>(usuarios, HttpStatus.OK); // Rertorna a lista em JSON
+
+    }
     
 }
