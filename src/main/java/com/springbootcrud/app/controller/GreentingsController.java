@@ -79,8 +79,7 @@ public class GreentingsController {
 		return new ResponseEntity<Usuario>(user, HttpStatus.OK);
 
 	}
-	
-	
+
 	@DeleteMapping(value = "delete") /* mapeia a url */
 	@ResponseBody /* Descricao da resposta */
 	public ResponseEntity<String> delete(@RequestParam Long iduser) { /* Recebe os dados para delete */
