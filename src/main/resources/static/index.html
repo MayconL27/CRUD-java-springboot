@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="styleshee.css" media="screen" />
+</head>
+<body>
+    <header>
+        <nav class="navbar bg-light">
+          <div class="container-fluid d-flex justify-content-center">
+            <a class="navbar-brand" href="#">
+              Crud-Java-Springoot
+            </a>
+          </div>
+        </nav>
+      </header>
+  
+      <section>       
+      <form action="" id="formularioCadastro">
+        <div class="mb-4">
+          <h3>Cadastro</h3>
+        </div>
+        
+            <div class="mb-3">
+                <label for="id" class="form-label">ID:</label>
+                <input type="text" class="form-control" id="id" placeholder="Id Gerado automatico" readonly="readonly">
+            </div>
+  
+          <div class="mb-3">
+              <label for="nome" class="form-label">Nome do usuário:</label>
+              <input type="text" class="form-control" id="nome" placeholder="Informe o nome: Ex. Fulano de Tal..." required="required">
+            </div>
+  
+            <div class="mb-3">
+              <label for="idade" class="form-label">Idade:</label>
+              <input type="number" class="form-control" id="idade" placeholder="Informe a idade: ex. 18 " required="required">
+            </div>
+
+      </form>
+      
+      <button type="button" class="btn btn-outline-success" onclick="salvarUsuario()">Salvar</button>
+      <button type="button" class="btn btn-outline-dark" onclick="document.getElementById('formularioCadastro').reset();">Novo</button>
+      <button type="button" class="btn btn-outline-info" data-bs-toggle="modal"  data-bs-target="#modalPesquisarUser">Pesquisar</button>
+      <button type="button" class="btn btn-outline-danger" onclick="botaoDeletarDaTela();">Deletar</button>
+      
+    </section>
+
+  
+    <div class="modal fade" id="modalPesquisarUser" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="exampleModalLabel">Pesquisa de usuário</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body">
+            <form>
+              <div class="mb-3">
+                <label for="nameBusca" class="col-form-label">Informe o nome:</label>
+                <input type="text" class="form-control" id="nameBusca">
+              </div>
+              <button type="button" class="btn btn-outline-success" onclick="pesquisarUser()">Buscar</button>
+            </form>
+    
+            <div style="height: 300px;overflow: scroll;">
+              <table class="table" id="tabelaresultados">
+                <thead>
+                  <tr>
+                    <th scope="col">ID</th>
+                    <th scope="col">Nome</th>
+                    <th scope="col">Editar</th>
+                    <th scope="col">Delete</th>
+                  </tr>
+                </thead>
+                <tbody>
+                </tbody>
+              </table>
+            </div>
+            </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-outline-secondary" data-bs-dismiss="modal">Fechar</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    
+
+    <footer>
+      <p>@MayconL27</p>
+    </footer>
+  
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa" crossorigin="anonymous"></script>
+    <script src="script.js"></script>
+</body>
+</html>

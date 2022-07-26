@@ -1,0 +1,25 @@
+body {
+    background-color: rgb(28, 28, 30);
+    font: normal 15pt Arial;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+section {
+    background: white;
+    border-radius: 18px;
+    padding: 15px;
+    width: 400px;
+    margin: auto;
+    margin-top: 5%;
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.555);
+}
+footer {
+    color: rgb(250, 250, 250);
+    text-align: center;
+    font-style: italic;
+    flex-shrink: 0;
+    padding: 30px;
+}
+.mb-4 {
+    text-align: center;
+}
